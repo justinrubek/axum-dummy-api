@@ -105,6 +105,18 @@
     packages = {
       default = packages.api;
       api = api-package;
+      api_image = pkgs.dockerTools.buildImage {
+        name = "dummy-api";
+        tag = self.rev or "dirty";
+
+        copyToRoot = pkgs.buildEnv {
+          name = "image-root";
+          paths = [api-package];
+          pathsToLink = ["/bin"];
+        };
+
+        config.Cmd = ["/bin/api"];
+      };
     };
 
     apps = {
