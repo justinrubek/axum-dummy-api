@@ -35,7 +35,7 @@
         ];
       };
 
-      pname = "rust-crane";
+      pname = "axum-dummy-api";
 
       buildInputs = allBuildInputs [];
       nativeBuildInputs = allNativeBuildInputs [];
