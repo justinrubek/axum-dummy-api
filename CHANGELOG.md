@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.2.1 - 2022-12-24
+#### Features
+- accept port from env - (68c5945) - Justin Rubek
+
+- - -
+
 ## 0.2.0 - 2022-12-24
 #### Features
 - add health route - (ed3086c) - Justin Rubek
