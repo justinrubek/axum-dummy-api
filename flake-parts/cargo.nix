@@ -71,7 +71,7 @@
     api-package = craneLib.buildPackage ({
         pname = "dummy-api";
         cargoArtifacts = deps-only;
-        cargoExtraArgs = "--bin api";
+        cargoExtraArgs = "--bin dummy_api";
       }
       // common-build-args);
 
@@ -115,14 +115,14 @@
           pathsToLink = ["/bin"];
         };
 
-        config.Cmd = ["/bin/api"];
+        config.Cmd = ["/bin/dummy_api"];
       };
     };
 
     apps = {
       api = {
         type = "app";
-        program = "${self.packages.${system}.api}/bin/api";
+        program = "${self.packages.${system}.api}/bin/dummy_api";
       };
       default = apps.api;
     };
